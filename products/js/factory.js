@@ -31,6 +31,7 @@ headers:{
             var pr = $q.defer()
             var url = "https://api.halanx.com/products/"+id;
             console.log(obj)
+                            var token=localStorage.getItem("token")
             $http.patch(url,obj,{
                         headers:{
      
