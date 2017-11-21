@@ -31,7 +31,14 @@ headers:{
             var pr = $q.defer()
             var url = "https://api.halanx.com/products/"+id;
             console.log(obj)
-            $http.patch(url,obj).then(function(data){
+            $http.patch(url,obj,{
+                        headers:{
+     
+    'Authorization':'Token '+token
+}
+                       
+            } ).then(function(data){
+                        
                 pr.resolve(data.data)
                 console.log("success"),
                     function(err){
